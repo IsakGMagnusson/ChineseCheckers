@@ -1,0 +1,232 @@
+img {
+ min-height: 100%;
+ min-width: 1024px;
+ 
+ width: 100%;
+ height: auto;
+ 
+ position: fixed;
+ top: 0;
+ left: 0;
+}
+
+.startSettings{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.74);
+  width: 40%;
+  height: 95%;
+  left: 50%;
+  top: 1%;
+}
+
+.startSettings h1{
+  position: absolute;
+  top: -3%;
+  color: white;
+
+}
+
+.divPlayers{
+  position: absolute;
+  top: 6%;
+  left: 1%;
+}
+
+.gameStart{
+  position: absolute;
+  top: 90%;
+  left: 45%;
+  width: 20%;
+  height: 8%;
+}
+
+/*board background*/
+.nextTurn{
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  width: 15%;
+  height: 6%;
+  transform: scale(0);
+}
+
+.undoBtn{
+  position: absolute;
+  top: 10%;
+  left: 1%;
+  width: 15%;
+  height: 6%;
+  transform: scale(0);
+}
+
+h4{
+  position: absolute;
+  top: 1%;
+  font-size:2.5vw;
+  left: 55%;
+  width: 100%;
+  height: 6%;
+}
+
+.background{
+  position: absolute;
+  background-color: #fcfcb6;
+  width: 45%;
+  height: 95%;
+  left: 0px;
+  top: 0px
+}
+
+/*generic for all triangles*/
+.triangle {
+  position: absolute;
+  right: 0;
+  padding-bottom: 50%;
+  }
+  
+
+  /*all the triangles*/
+.green{ 
+  background: rgb(42, 116, 45);
+    top: 3%;
+    left: 33%; 
+    clip-path: polygon(20% 0%, 5% 40%, 35% 40%);
+
+  }
+  
+  .red{
+    background: rgb(255, 23, 23);
+    top: 56%;
+    left: 33%;
+    clip-path: polygon(20% 80%, 5% 40%, 35% 40%);
+  }
+
+  .blue{
+    background: rgb(32, 170, 170);
+    top: 28%;
+    left: 40%;
+    clip-path: polygon(20% 0%, 0% 40%, 43% 40%);
+    transform: rotate(61deg);
+
+  }
+
+  .orange{
+    border-bottom: 140px solid orange;
+    left: -255px;
+    top: 117px;
+    transform: rotate(59deg);
+    clip-path: polygon(20% 0%, 5% 40%, 35% 40%);
+
+  }
+
+  .brown{
+    border-bottom: 140px solid brown;
+    left: -255px;
+    top: 375px;
+    transform: rotate(121.1deg);
+    clip-path: polygon(20% 0%, 5% 40%, 35% 40%);
+
+  }
+
+  .yellow{
+    border-bottom: 140px solid yellow;
+    left: 115px;
+    top: 375px;
+    transform: rotate(121.1deg);
+    clip-path: polygon(20% 0%, 5% 40%, 35% 40%);
+
+  }
+
+/*generic holes*/
+.holes{
+    position: absolute;
+    border-radius: 50%;
+    width: 1.3vw;
+    height: 1.3vw;
+    background-color: #000000;
+    left: 20vw;
+    top: 1vw;
+}
+
+/*generic for all pebbles*/
+.pebble{
+    position: absolute;
+    border-radius: 50%;
+    width: 1.3vw;
+    height: 1.3vw;
+    left: 20vw;
+    top: 1vw;
+}
+/*generic line diagonal line*/
+.line {
+    position: absolute;
+    height: 0%;
+    width: 79%;
+    padding: 0.3%;
+    background-color: black;
+    left: 24.5%;
+    top: 38%;
+    transform:rotate(63deg);
+}
+
+
+.modalEnterName-bg{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalEnterName{
+  background-color: white;
+  width: 30%;
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modalWon-bg{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalWon{
+  background-color: white;
+  width: 30%;
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.playerWonText{
+  top: 20%;
+  left: 40%;
+
+  font-size: xx-large;
+  font-weight: "bold";
+}
+
+.newGame{
+  position: absolute;
+  top: 90%;
+  left: 45%;
+  width: 20%;
+  height: 8%;
+}
+    

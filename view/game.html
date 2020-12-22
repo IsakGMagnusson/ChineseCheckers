@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>schack</title> 
+        <link rel="stylesheet" type="text/css" href="/schack.css">
+    </head>
+    <body>
+        <div class = 'image'>
+            <img src="https://cdn7.dissolve.com/p/D2115_198_929/D2115_198_929_1200.jpg" >
+        </div>
+  
+        <div class = 'background' id ='background'> 
+
+            <button class="nextTurn" id ='nextTurnBtn'>next turn</button>
+
+            <button class="undoBtn" id ='undoBtn'>undo move</button>
+
+            <h4 class = 'currPlayerText' id="currPlayerText">Player: x turn</h4>
+
+            <div class = 'triangle green'></div>
+
+            <div class = 'triangle red'></div>
+
+            <div id='holes'></div>
+
+            <div id='pebbles'> </div>
+
+        </div>
+
+            <div class = 'startSettings' id = 'startSettings'>
+                <h1>Joined players:</h1>
+               
+                <div id  = 'divPlayers' class="divPlayers"></div>
+
+                <button class="gameStart" id = 'gameStart'>Start game</button>
+    
+            </div>
+
+            <div class ="modalWon-bg" id = 'modalWon-bg'> 
+                <div class="modalWon" id = 'modalWon'> 
+                    <div id = 'playerWonText' class="playerWonText">Player X won!</div>
+                    <button id ='newGame'>new game</button>
+
+                </div>
+            </div>
+
+            <div class ="modalEnterName-bg" id = 'modalEnterName-bg'> 
+                <div class="modalEnterName"> 
+                    <label for="name">Enter name</label>
+                    <input type="text" name="name" id = 'inputName'>
+                    <button id ='joingame'>Join game!</button>
+                </div>
+            </div>
+    
+        </div>   
+    <script type="text/javascript" src="/static/client.js"></script> 
+    <script type="text/javascript" src="/static/player.js"></script>
+    <script type="text/javascript" src="/static/selectscreen.js"></script>
+
+    <script type="text/javascript" src="/static/hole.js"></script>
+
+    <script type="text/javascript" src="/static/view.js"></script>
+    <script type="text/javascript" src="/static/controller.js"></script>
+
+    <script >
+
+    //join game
+joingame.addEventListener('click', function(){
+    removeComponent("modalEnterName-bg");
+    removeComponent("modalWon-bg");
+    //Get substring after last /, which is the gamecode
+    gameId = window.location.href.slice(window.location.href.lastIndexOf('/') + 1);
+    let name = document.getElementById('inputName').value;
+    
+    if(name.trim() === "") name = "Guest";
+
+    const payLoad = {
+                "method": "join",
+                "clientId": clientId,
+                "gameId": gameId,
+                "name": name
+            }
+
+     ws.send(JSON.stringify(payLoad));
+
+});
+    </script>
+
+</body>
+</html>

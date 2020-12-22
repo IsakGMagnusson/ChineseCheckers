@@ -1,0 +1,10 @@
+.components{
+    position: absolute;
+    left: 45%;
+    top: 45%
+}
+
+.secondRow{
+    position: relative;
+    top: 2%;
+}
